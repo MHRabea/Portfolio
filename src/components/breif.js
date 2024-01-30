@@ -10,7 +10,7 @@ const Brief = () => {
       overflow-hidden mt-10 "
     >
       <div
-        className="animate-[fadeInX_0.8s_ease-in-out_0.1s] z-10 w-full h-full justify-center items-center flex flex-col 
+        className="animate-[fadeInX_0.8s_ease-in-out_0.1s] z-0 w-full h-full justify-center items-center flex flex-col 
       text-center
       "
       >

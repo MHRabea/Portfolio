@@ -51,8 +51,8 @@ const Navbar = () => {
           <Link activeClass="active" smooth spy to='brief'>
             <button
               className="animate-[fadeInY_0.8s_ease-in-out_0.1s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-1
-              rounded-2xl hover:scale-110 transition hover:ease-in-out bg-transparent m-3
+            hover:shadow-sky-500 p-2
+              rounded-md hover:scale-110 transition hover:ease-in-out bg-transparent m-3
               hover:border-b-2 hover:border-sky-600 duration-75
           "
             >
@@ -62,19 +62,19 @@ const Navbar = () => {
           <Link activeClass="active" smooth spy to='about'>
             <button
               className="animate-[fadeInY_0.8s_ease-in-out_0.2s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-1
-              rounded-2xl hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
+            hover:shadow-sky-500 p-2
+              rounded-md hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
               hover:border-b-2 hover:border-sky-600 duration-75
           "
             >
               About
             </button>
           </Link>
-          <Link activeClass="active" smooth spy to=''>
+          <Link activeClass="active" smooth spy to='portfolio'>
             <button
               className="animate-[fadeInY_0.8s_ease-in-out_0.3s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-1
-              rounded-2xl hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
+            hover:shadow-sky-500 p-2
+              rounded-md hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
               hover:border-b-2 hover:border-sky-600 duration-75
           "
             >
@@ -84,8 +84,8 @@ const Navbar = () => {
           <Link activeClass="active" smooth spy to=''>
             <button
               className="animate-[fadeInY_0.8s_ease-in-out_0.4s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-1
-              rounded-2xl hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
+            hover:shadow-sky-500 p-2
+              rounded-md hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
               hover:border-b-2 hover:border-sky-600 duration-75
           "
             >
@@ -133,7 +133,7 @@ const Navbar = () => {
               <GrHomeRounded
                 size={25}
                 className=" transition  duration-75 ease-in-out cursor-pointer hover:scale-125
-      animate-[fadeInX_1.2s_ease-in-out] text-sky-400
+                animate-[fadeInY_1.5s_ease-in-out_0.5s] text-sky-400
       "
               />
               <span className="group/edit invisible group-hover/item:visible cursor-pointer">
@@ -145,18 +145,18 @@ const Navbar = () => {
               <FaRegUser
                 size={25}
                 className="transition duration-75 ease-in-out cursor-pointer hover:scale-125
-      animate-[fadeInX_1.2s_ease-in-out] text-sky-400
+                animate-[fadeInY_1.5s_ease-in-out_0.6s] text-sky-400
       "
               />
               <span className="group/edit invisible group-hover/item:visible cursor-pointer">
                 about
               </span>
             </Link>
-            <Link activeClass="active" smooth spy to='' className=" group/item flex flex-col items-center justify-center space-y-1">
+            <Link activeClass="active" smooth spy to='portfolio' className=" group/item flex flex-col items-center justify-center space-y-1">
               <MdOutlineDocumentScanner
                 size={25}
                 className="transition duration-75 ease-in-out cursor-pointer hover:scale-125
-      animate-[fadeInX_1.2s_ease-in-out] text-sky-400
+                animate-[fadeInY_1.5s_ease-in-out_0.7s] text-sky-400
       "
               />
               <span className="group/edit invisible group-hover/item:visible cursor-pointer">
@@ -167,7 +167,7 @@ const Navbar = () => {
               <BiMessageSquareDetail
                 size={25}
                 className="transition duration-75 ease-in-out cursor-pointer hover:scale-125
-      animate-[fadeInX_1.2s_ease-in-out] text-sky-400
+                animate-[fadeInY_1.5s_ease-in-out_0.8s] text-sky-400
       "
               />
               <span className="group/edit invisible group-hover/item:visible cursor-pointer">
@@ -178,7 +178,7 @@ const Navbar = () => {
               size={25}
               onClick={handleToggleNav}
               className="transition ease-in-out hover:scale-125 cursor-pointer duration-75
-      animate-[fadeInX_1.2s_ease-in-out] text-sky-400
+              animate-[fadeInY_1.5s_ease-in-out_0.9s] text-sky-400
        "
             /><span className="group/edit invisible group-hover/item:visible cursor-pointer">
                 close
