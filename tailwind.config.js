@@ -11,8 +11,10 @@ module.exports = {
         collapse : 'collapse 1s ease-in-out',
         expand40 : "expand40 1s ease-in-out",
         expandHz : "expandHz 1s ease-in-out",
-        translateXin : "translateXin 1s ease-in-out forwards",
-        translateXout : "translateXout 1s ease-in-out forwards",
+        translateXin : "translateXin 1s ease-in-out 0s forwards",
+        translateXout : "translateXout 1s ease-in-out 0s forwards",
+        expandvl : "expandvl 1s ease-in-out 0s forwards ",
+        collapsevl : "collapsevl 1s ease-in-out 0s forwards",
 
       },
       keyframes:{
@@ -42,8 +44,12 @@ module.exports = {
         },
         
         expand:{
-          "0%" : {"opacity" :"0", 'height' : '0%' },
+          "0%" : {"opacity" :"0", 'height' : '0' },
            '100%' :{'opacity' : '1' , 'height' : '30rem'} 
+        },
+        expandvl:{
+          "0%" : {"opacity" :"0", 'height' : '0' },
+           '100%' :{'opacity' : '1' , 'height' : '15rem'} 
         },
         expandHz:{
           "0%" : {"opacity" :"0", 'width' : '0%' },
@@ -61,6 +67,10 @@ module.exports = {
         collapse40:{
           "0%" : {"opacity" :"1", 'height' : '40rem' },
            '100%' :{'opacity' : '0' , 'height' : '0%'} 
+        },
+        collapsevl :{
+          "0%" : {"opacity" :"1", "height": "15rem" },
+          "100%" :{'opacity' : '0' , 'height' : '0'}
         }
 
       }, 

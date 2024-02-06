@@ -39,9 +39,9 @@ const CarouselP2 = ({ images, interval = 3000 }) => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [currentIndex, isEnlarged]);
+  });
   return (
-    <div className="relative w-96 rounded-lg px-2 z-0">
+    <div className="relative w-96 h-[15rem] rounded-lg px-2 flex items-center justify-center flex-col">
       {/* enlarged image */}
       {isEnlarged && (
         <AnimatePresence>
@@ -53,11 +53,11 @@ const CarouselP2 = ({ images, interval = 3000 }) => {
             transition={{ duration: 0.5 }}
             onClick={handleClose}
             className="fixed inset-0 flex flex-col items-center 
-            justify-center z-50 px-5 py-5 bg-sky-500/5 
+            justify-center z-40 px-5 py-5 bg-sky-500/5 
             backdrop-blur-md"
           >
             <motion.div
-              className="w-[40rem] h-[40rem] max-w-full max-h-full z-50
+              className="w-[40rem] h-[40rem] max-w-full max-h-full z-40
                md:w-[50rem] md:h-[50rem] lg:w-[70rem] lg:h-[70rem
                overflow-hidden "
               exit={{ opacity: 0, scale: 0.8 }}
@@ -66,50 +66,24 @@ const CarouselP2 = ({ images, interval = 3000 }) => {
                 key="image"
                 src={images[currentIndex]}
                 alt={`Slide ${currentIndex}`}
-                className="object-contain w-full h-full cursor-pointer z-40"
+                className="object-contain w-full h-full cursor-pointer z-30"
               />
             </motion.div>
             {currentIndex === 0 && (
               <p className="font-mono text-xl text-sky-200">
-                Modern & Responsive Design
+                Landing Page
               </p>
             )}
             {currentIndex === 1 && (
               <p className="font-mono text-xl text-sky-200">
-                React & Comment
+                Click & Review
               </p>
             )}
             {currentIndex === 2 && (
               <p className="font-mono text-xl text-sky-200">
-               Review Images
+                Upload
               </p>
             )}
-            {currentIndex === 3 && (
-              <p className="font-mono text-xl text-sky-200">
-                Profile Page 
-              </p>
-            )}
-            {currentIndex === 4 && (
-              <p className="font-mono text-xl text-sky-200">
-                Add a Post
-              </p>
-            )}
-            {currentIndex === 5 && (
-              <p className="font-mono text-xl text-sky-200">
-              follow and Unfollow others
-              </p>
-            )}
-            {currentIndex === 6 && (
-              <p className="font-mono text-xl text-sky-200">
-                Sign in
-              </p>
-            )}
-            {currentIndex === 7 && (
-              <p className="font-mono text-xl text-sky-200">
-                Sign Up
-              </p>
-            )}
-            
           </motion.div>
         </AnimatePresence>
       )}
@@ -136,12 +110,13 @@ const CarouselP2 = ({ images, interval = 3000 }) => {
 
       {/* <!-- Slider indicators --> */}
 
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-1 left-1/2 space-x-3 rtl:space-x-reverse">
         {images.map((image, index) => (
           <button
             type="button"
             key={index}
-            className={`bg-sky-400 w-3 h-3 rounded-full transition ease-in-out duration-400 hover:scale-125 hover:bg-sky-200 ${
+            className={`bg-sky-400 w-3 h-3 rounded-full transition ease-in-out duration-400 hover:scale-125
+             hover:bg-sky-200 ${
               index === currentIndex && "bg-sky-100 scale-125"
             }`}
             onClick={() => slideTo(index)}
@@ -153,22 +128,24 @@ const CarouselP2 = ({ images, interval = 3000 }) => {
 
       <button
         type="button"
-        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4
+         cursor-pointer group focus:outline-none"
         onClick={prevSlide}
       >
         <IoIosArrowDropleftCircle
-          className="hover:scale-125 transition ease-in-out"
+          className="hover:scale-125 transition ease-in-out text-sky-500"
           size={30}
         />
       </button>
       <button
         type="button"
-        className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 
+         cursor-pointer group focus:outline-none"
         onClick={nextSlide}
       >
         <IoIosArrowDroprightCircle
           size={30}
-          className="hover:scale-125 transition ease-in-out"
+          className="hover:scale-125 transition ease-in-out text-sky-500"
         />
       </button>
     </div>
