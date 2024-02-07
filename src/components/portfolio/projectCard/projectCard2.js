@@ -1,11 +1,12 @@
 import { useState } from "react";
-import CarouselP1 from "../carousel/carouselP1";
+import CarouselP2 from "../carousel/carouselP2";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 
-const ProjectCard1 = ({ images}) => {
- const [expanded , setExpanded] = useState(false);
+const ProjectCard2 = ({ images }) => {
+  const [expanded , setExpanded] = useState(false);
+
 
   const handleExpand = () => {
     setExpanded(!expanded);
@@ -17,35 +18,19 @@ const ProjectCard1 = ({ images}) => {
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "SignUp & LogIn",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
       text: "Responsive & Modern Design",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Upload Posts and Add Captions",
+      text: "Upload Images to the Gallery",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "React and Comment",
+      text: "Smooth Animations ",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Profile Pages ",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
-      text: "Keep Track Of Followers and Followings",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
-      text: "Keep Track of Reactions & Comments",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
-      text: "Follow & Unfollow Profiles",
+      text: "Review Images",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
   ];
@@ -55,7 +40,7 @@ const ProjectCard1 = ({ images}) => {
       opacity: 0,
     },
     animate: {
-      height: "20rem",
+      height: "17rem",
       opacity: 1,
       transition: {
         duration: 0.8,
@@ -86,9 +71,9 @@ const ProjectCard1 = ({ images}) => {
         }}
         className="flex items-center justify-center flex-col space-y-3"
       >
-        <CarouselP1 images={images} />
+        <CarouselP2 images={images} />
         <div className=" flex flex-col items-center justify-center w-96 max-w-80">
-          <p className="text-lg font-mono text-sky-200">Instagram Clone App</p>
+          <p className="text-lg font-mono text-sky-200">Gallery App</p>
         </div>
         <motion.button
           whileHover={{ scale: 1.2 }}
@@ -158,7 +143,7 @@ const ProjectCard1 = ({ images}) => {
             damping: 17,
           }}
         className="w-18 h-10 p-2 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-          <a href="https://github.com/MHRabea/instagram-clone.git">
+          <a href="https://github.com/MHRabea/My-Gallery.git">
             Source Code
           </a>
         </motion.button>
@@ -167,4 +152,4 @@ const ProjectCard1 = ({ images}) => {
   );
 };
 
-export default ProjectCard1;
+export default ProjectCard2;

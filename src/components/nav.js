@@ -8,6 +8,7 @@ import { GrHomeRounded } from "react-icons/gr";
 import { MdOutlineDocumentScanner } from "react-icons/md";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { FaRegUser } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
@@ -15,11 +16,38 @@ const Navbar = () => {
   const handleToggleNav = () => {
     setToggleNav(!toggleNav);
   };
+  const navigationsWeb = [
+    {
+      text: "Home",
+      id: "brief",
+    },
+    {
+      text: "About",
+      id: "about",
+    },
+    {
+      text: "Portfolio",
+      id: "portfolio",
+    },
+    {
+      text: "Contact",
+      id: "contact",
+    },
+  ];
 
   return (
     <div className=" flex flex-col items-center justify-center space-y-5">
-      <nav className="h-40 w-screen py-1 flex items-center justify-between max-w-[80rem] px-5">
-        <img
+      <nav className="h-40 w-screen py-1 flex items-center justify-between max-w-[80rem] px-7">
+        <motion.img
+          variants={{
+            hidden: { opacity: 0, y: "-30vh" },
+            show: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+          transition={{
+            duration: 0.7,
+          }}
           src={Logo}
           alt="logo-img"
           className=" animate-[fadeInY_0.8s_ease-in-out_0.1s] object-cover h-20 w-25"
@@ -29,6 +57,58 @@ const Navbar = () => {
           className="md:hidden flex items-center justify-center"
         >
           {toggleNav ? (
+            <motion.div
+              variants={{
+                initial: {
+                  opacity: 0,
+                  y: "-30vh",
+                },
+                animate: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              initial="initial"
+              animate="animate"
+              className="cursor-pointer"
+            >
+              <IoCloseOutline size={40} color="#0ea5e9" />
+            </motion.div>
+          ) : (
+            <motion.div
+              variants={{
+                initial: {
+                  opacity: 0,
+                  y: "-30vh",
+                },
+                animate: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 17,
+              }}
+              initial="initial"
+              animate="animate"
+              className="cursor-pointer"
+            >
+              <CiMenuFries size={40} color="#0ea5e9" />
+            </motion.div>
+          )}
+
+          {/* {toggleNav ? (
             <IoCloseOutline
               size={40}
               color="#0ea5e9"
@@ -44,60 +124,53 @@ const Navbar = () => {
                 toggleNav ? "animate-fadeIn" : "animate-fadeIn"
               } animate-[fadeInY_0.9s_ease-in-out] transition duration-75 hover:scale-110 cursor-pointer `}
             />
-          )}
+          )} */}
         </div>
         {/* navBar web view */}
-        <div className="hidden md:flex">
-          <Link activeClass="active" smooth spy to='brief'>
-            <button
-              className="animate-[fadeInY_0.8s_ease-in-out_0.1s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-2
-              rounded-md hover:scale-110 transition hover:ease-in-out bg-transparent m-3
-              hover:border-b-2 hover:border-sky-600 duration-75
-          "
+        <div className="hidden md:flex ">
+          {navigationsWeb.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: "-30vh" },
+                show: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="show"
+              transition={{
+                duration: 0.7,
+                delay: index * 0.1,
+              }}
             >
-              Home
-            </button>
-          </Link>
-          <Link activeClass="active" smooth spy to='about'>
-            <button
-              className="animate-[fadeInY_0.8s_ease-in-out_0.2s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-2
-              rounded-md hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
-              hover:border-b-2 hover:border-sky-600 duration-75
-          "
-            >
-              About
-            </button>
-          </Link>
-          <Link activeClass="active" smooth spy to='portfolio'>
-            <button
-              className="animate-[fadeInY_0.8s_ease-in-out_0.3s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-2
-              rounded-md hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
-              hover:border-b-2 hover:border-sky-600 duration-75
-          "
-            >
-              Portfolio
-            </button>
-          </Link>
-          <Link activeClass="active" smooth spy to=''>
-            <button
-              className="animate-[fadeInY_0.8s_ease-in-out_0.4s] cursor-pointer hover:shadow-2xl 
-            hover:shadow-sky-500 p-2
-              rounded-md hover:scale-110 transition hovr:ease-in-out bg-transparent m-3
-              hover:border-b-2 hover:border-sky-600 duration-75
-          "
-            >
-              Client
-            </button>
-          </Link>
+              <Link activeClass="active" smooth spy to={item.id}>
+                <motion.button
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
+                  className="text-sky-400 cursor-pointer p-2 bg-transparent m-3 hover:border-b-2 
+                  hover:border-sky-300
+                  "
+                >
+                  {item.text}
+                </motion.button>
+              </Link>
+            </motion.div>
+          ))}
         </div>
-        <button
-          className="animate-[fadeInY_0.8s_ease-in-out_0.5s]
-             p-2 rounded-2xl transition ease-in-out hover:scale-105 bg-transparent shadow-md 
-             hover:shadow-2xl shadow-sky-600 hover:shadow-sky-500 hidden md:flex items-center
-             duration-75 
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
+          className="
+             p-2  ease-in-out bg-transparent hidden md:flex items-center hover:border-b-2 border-sky-300
         "
         >
           <svg
@@ -115,7 +188,7 @@ const Navbar = () => {
             />
           </svg>
           Contact me
-        </button>
+        </motion.button>
       </nav>
       {/* navBar mobile view */}
       <div
@@ -129,7 +202,13 @@ const Navbar = () => {
       >
         {toggleNav ? (
           <>
-            <Link activeClass="active" smooth spy to='brief' className=" group/item flex flex-col items-center justify-center space-y-1">
+            <Link
+              activeClass="active"
+              smooth
+              spy
+              to="brief"
+              className=" group/item flex flex-col items-center justify-center space-y-1"
+            >
               <GrHomeRounded
                 size={25}
                 className=" transition  duration-75 ease-in-out cursor-pointer hover:scale-125
@@ -141,7 +220,13 @@ const Navbar = () => {
               </span>
             </Link>
 
-            <Link activeClass="active" smooth spy to='about' className=" group/item flex flex-col items-center justify-center space-y-1">
+            <Link
+              activeClass="active"
+              smooth
+              spy
+              to="about"
+              className=" group/item flex flex-col items-center justify-center space-y-1"
+            >
               <FaRegUser
                 size={25}
                 className="transition duration-75 ease-in-out cursor-pointer hover:scale-125
@@ -152,7 +237,13 @@ const Navbar = () => {
                 about
               </span>
             </Link>
-            <Link activeClass="active" smooth spy to='portfolio' className=" group/item flex flex-col items-center justify-center space-y-1">
+            <Link
+              activeClass="active"
+              smooth
+              spy
+              to="portfolio"
+              className=" group/item flex flex-col items-center justify-center space-y-1"
+            >
               <MdOutlineDocumentScanner
                 size={25}
                 className="transition duration-75 ease-in-out cursor-pointer hover:scale-125
@@ -163,7 +254,13 @@ const Navbar = () => {
                 portfolio
               </span>
             </Link>
-            <Link activeClass="active" smooth spy to='' className=" group/item flex flex-col items-center justify-center space-y-1">
+            <Link
+              activeClass="active"
+              smooth
+              spy
+              to=""
+              className=" group/item flex flex-col items-center justify-center space-y-1"
+            >
               <BiMessageSquareDetail
                 size={25}
                 className="transition duration-75 ease-in-out cursor-pointer hover:scale-125
@@ -174,13 +271,15 @@ const Navbar = () => {
                 contact
               </span>
             </Link>
-            <div className=" group/item flex flex-col items-center justify-center space-y-1"><MdClose
-              size={25}
-              onClick={handleToggleNav}
-              className="transition ease-in-out hover:scale-125 cursor-pointer duration-75
+            <div className=" group/item flex flex-col items-center justify-center space-y-1">
+              <MdClose
+                size={25}
+                onClick={handleToggleNav}
+                className="transition ease-in-out hover:scale-125 cursor-pointer duration-75
               animate-[fadeInY_1.5s_ease-in-out_0.9s] text-sky-400
        "
-            /><span className="group/edit invisible group-hover/item:visible cursor-pointer">
+              />
+              <span className="group/edit invisible group-hover/item:visible cursor-pointer">
                 close
               </span>
             </div>

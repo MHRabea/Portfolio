@@ -1,11 +1,11 @@
 import { useState } from "react";
-import CarouselP1 from "../carousel/carouselP1";
+import CarouselP3 from "../carousel/carouselP3";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 
-const ProjectCard1 = ({ images}) => {
- const [expanded , setExpanded] = useState(false);
+const ProjectCard3 = ({ images }) => {
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpand = () => {
     setExpanded(!expanded);
@@ -13,7 +13,15 @@ const ProjectCard1 = ({ images}) => {
 
   const details = [
     {
-      text: "Develeped Using React.js, TailwindCss and FireBase",
+        text: "My First App",
+        icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      },
+   {
+      text: "Develeped Using React.js, Css and FireBase",
+      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+    },
+    {
+      text: "Responsive Design",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
@@ -21,31 +29,15 @@ const ProjectCard1 = ({ images}) => {
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Responsive & Modern Design",
+      text: "Add & Contacts",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Upload Posts and Add Captions",
+      text: "Search For contacts",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "React and Comment",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
-      text: "Profile Pages ",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
-      text: "Keep Track Of Followers and Followings",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
-      text: "Keep Track of Reactions & Comments",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
-    },
-    {
-      text: "Follow & Unfollow Profiles",
+      text: "Send Texts & Images",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
   ];
@@ -55,7 +47,7 @@ const ProjectCard1 = ({ images}) => {
       opacity: 0,
     },
     animate: {
-      height: "20rem",
+      height: "17rem",
       opacity: 1,
       transition: {
         duration: 0.8,
@@ -86,9 +78,9 @@ const ProjectCard1 = ({ images}) => {
         }}
         className="flex items-center justify-center flex-col space-y-3"
       >
-        <CarouselP1 images={images} />
+        <CarouselP3 images={images} />
         <div className=" flex flex-col items-center justify-center w-96 max-w-80">
-          <p className="text-lg font-mono text-sky-200">Instagram Clone App</p>
+          <p className="text-lg font-mono text-sky-200">Chat App</p>
         </div>
         <motion.button
           whileHover={{ scale: 1.2 }}
@@ -158,7 +150,7 @@ const ProjectCard1 = ({ images}) => {
             damping: 17,
           }}
         className="w-18 h-10 p-2 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-          <a href="https://github.com/MHRabea/instagram-clone.git">
+          <a href="https://github.com/MHRabea/Chat-App--.git">
             Source Code
           </a>
         </motion.button>
@@ -167,4 +159,4 @@ const ProjectCard1 = ({ images}) => {
   );
 };
 
-export default ProjectCard1;
+export default ProjectCard3;

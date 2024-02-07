@@ -1,7 +1,8 @@
 import React from "react";
-import CarouselP2 from "./carousel/carouselP2";
-import CarouselP3 from "./carousel/carouselP3";
 import ProjectCard1 from "./projectCard/projectCard1";
+import ProjectCard2 from "./projectCard/projectCard2";
+import ProjectCard3 from "./projectCard/projectCard3";
+import ProjectCard4 from "./projectCard/projectCard4";
 
 const Portfolio = () => {
   // imageImporter.js
@@ -36,11 +37,14 @@ const Portfolio = () => {
     >
       <div className="flex flex-col justify-center items-center p-4 w-[20rem] text-2xl font-mono">
         <span>Recent Projects</span>
-        <span className="text-sky-400 ">Prortfolio</span>
+        <span className="text-sky-400">Prortfolio</span>
       </div>
-      <ProjectCard1 images={images} />
-      <CarouselP2 images={imagesII}/>
-      <CarouselP3 images={imagesIII}/>
+      <div className="flex flex-wrap items-center justify-center gap-5">
+        <ProjectCard1 images={images} />
+        <ProjectCard2 images={imagesII} />
+        <ProjectCard3 images={imagesIII} />
+        <ProjectCard4 images={imagesII} />
+      </div>
     </section>
   );
 };

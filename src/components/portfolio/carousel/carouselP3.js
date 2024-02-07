@@ -115,7 +115,7 @@ const CarouselP3 = ({ images, interval = 3000 }) => {
 
       {/* <!-- Slider indicators --> */}
 
-      <div className="absolute z-30 flex -translate-x-1/2 bottom-1 left-1/2 space-x-3 rtl:space-x-reverse">
+      <div className="absolute z-20 flex -translate-x-1/2 bottom-1 left-1/2 space-x-3 rtl:space-x-reverse">
         {images.map((image, index) => (
           <button
             type="button"
@@ -133,7 +133,7 @@ const CarouselP3 = ({ images, interval = 3000 }) => {
 
       <button
         type="button"
-        className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="absolute top-0 start-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         onClick={prevSlide}
       >
         <IoIosArrowDropleftCircle
@@ -143,7 +143,7 @@ const CarouselP3 = ({ images, interval = 3000 }) => {
       </button>
       <button
         type="button"
-        className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        className="absolute top-0 end-0 z-20 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         onClick={nextSlide}
       >
         <IoIosArrowDroprightCircle
