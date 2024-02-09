@@ -12,8 +12,9 @@ const Contact = () => {
       <div className="flex flex-col justify-center items-center p-4 w-[20rem] text-2xl font-mono">
         <span className="text-sky-400">Contact Me</span>
       </div>
+      {/* =================> Contacts-Start <============= */}
       <div className="flex flex-wrap items-center justify-center gap-10">
-      {/* =================> Email <================ */}
+      {/* =================> Email-Start <================ */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 75, scale: 0.7 },
@@ -43,6 +44,7 @@ const Contact = () => {
           >
             <a
               href="mailto:eng.mahmoud196@gmail.com"
+              rel="noreferrer"
               target="_blank"
               className="cursor-pointer"
             >
@@ -50,7 +52,9 @@ const Contact = () => {
             </a>
           </motion.button>
         </motion.div>
-        {/* =================> messenger <================ */}
+        {/* ===========> Email-End <=============== */}
+
+        {/* ===========> Messenger-Start <=============== */}
 
         <motion.div
           variants={{
@@ -81,6 +85,7 @@ const Contact = () => {
           >
             <a
               href="https://m.me/mahmoud.rabea.940641"
+              rel="noreferrer"
               target="_blank"
               className="cursor-pointer"
             >
@@ -88,8 +93,9 @@ const Contact = () => {
             </a>
           </motion.button>
         </motion.div>
+        {/* ===========> Messenger-End <=============== */}
 
-        {/* =================> whatsapp <================ */}
+        {/* ===========> Whatsapp-start <============== */}
 
         <motion.div
           variants={{
@@ -120,6 +126,7 @@ const Contact = () => {
           >
             <a
               href="https://wa.me/+2001116305540"
+              rel="noreferrer"
               target="_blank"
               className="cursor-pointer"
             >
@@ -127,9 +134,24 @@ const Contact = () => {
             </a>
           </motion.button>
         </motion.div>
+        {/* ===========> Whatsapp-End <================= */}
 
-        
       </div>
+        {/* ===========> Contacts-End <================= */}
+
+        {/* ===========> direct Email Section - Start <= */}
+
+        <div className="flex flex-wrap gap-2 items-center justify-center py-10">
+
+        <form action="" className="flex flex-wrap items-center justify-center gap-2">
+        <div className="flex flex-col items-center justify-center space-y-4">
+        <input type="text" name="name" placeholder="Enter Your Full Name"  required/>
+        <input type="email" name="email" placeholder="Enter your Email"  required/>
+        </div>
+        <textarea name="message" id="" cols="30" rows="10" required></textarea>
+        <button type="submit" className="" > Send Message</button>
+        </form>
+        </div>
     </section>
   );
 };

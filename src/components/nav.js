@@ -188,6 +188,8 @@ const Navbar = () => {
             stiffness: 400,
             damping: 17,
           }}
+          className="p-2 ease-in-out bg-transparent hidden md:flex items-center hover:border-b-2 border-sky-300
+              text-sky-400"
         >
           <motion.div
             variants={{
@@ -201,7 +203,7 @@ const Navbar = () => {
               delay:1.2,
             }}
             className="p-2 ease-in-out bg-transparent hidden md:flex items-center hover:border-b-2 border-sky-300
-             space-x-2 text-sky-400"
+              text-sky-400"
           >
             <TbMessageCircleCheck size={30} className="" />
             <h4>Contact me</h4>
