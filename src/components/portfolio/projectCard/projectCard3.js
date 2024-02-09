@@ -75,6 +75,9 @@ const ProjectCard3 = ({ images }) => {
         whileInView="visible"
         transition={{
           duration: 0.6,
+          type: "spring",
+          stiffness: 400,
+          damping: 17,
         }}
         className="flex items-center justify-center flex-col space-y-3"
       >

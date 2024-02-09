@@ -3,6 +3,7 @@ import Navbar from "./components/nav";
 import Brief from "./components/breif"; 
 import About from "./components/about";
 import Portfolio from "./components/portfolio/portfolio";
+import Contact from "./components/contact";
 
 
 
@@ -14,6 +15,7 @@ function App() {
      <Brief />
      <About />
      <Portfolio />
+     <Contact />
      </div>
   );
 }
