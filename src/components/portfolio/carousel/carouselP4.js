@@ -96,7 +96,12 @@ const CarouselP3 = ({ images, interval = 3000 }) => {
                         )}
                         {currentIndex === 5 && (
                             <p className="font-mono text-xl text-sky-200">
-                                Project Details
+                                Footer
+                            </p>
+                        )}
+                        {currentIndex === 6 && (
+                            <p className="font-mono text-xl text-sky-200">
+                                Project details
                             </p>
                         )}
 

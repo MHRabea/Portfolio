@@ -8,6 +8,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { IoIosGitBranch } from "react-icons/io";
 import { BsPatchCheckFill } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiFramer } from "react-icons/fi";
 
 const About = () => {
   const services = [
@@ -45,32 +46,11 @@ const About = () => {
 
   const rightSideSkills = [
     {
-      skill: "Bootstrap",
-      level: "Experienced",
-      size: 40,
-      icon: <FaBootstrap size={40} className="text-sky-400" />,
-    },
-    {
       skill: "Fire Base",
       level: "Experienced",
       size: 40,
       icon: <IoLogoFirebase size={40} className="text-sky-400" />,
     },
-    {
-      skill: "Tailwind CSS",
-      level: "Experienced",
-      size: 38,
-      icon: <SiTailwindcss size={38} className="text-sky-400" />,
-    },
-    {
-      skill: "Git",
-      level: "Experienced",
-      size: 35,
-      icon: <IoIosGitBranch size={35} className="text-sky-400" />,
-    },
-  ];
-
-  const leftSideSkills = [
     {
       skill: "Html",
       level: "Experienced",
@@ -84,17 +64,40 @@ const About = () => {
       icon: <SiCss3 size={38} className="text-sky-400" />,
     },
     {
+      skill: "Git",
+      level: "Experienced",
+      size: 35,
+      icon: <IoIosGitBranch size={35} className="text-sky-400" />,
+    },
+  ];
+
+  const leftSideSkills = [
+    {
+      skill: "React.js",
+      level: "Experienced",
+      size: 40,
+      icon: <FaReact size={40} className="text-sky-400" />,
+    },
+    {
       skill: "JavaScript",
       level: "Experienced",
       size: 45,
       icon: <TbBrandJavascript size={45} className="text-sky-400" />,
     },
     {
-      skill: "React",
+      skill: "Tailwind CSS",
+      level: "Experienced",
+      size: 38,
+      icon: <SiTailwindcss size={38} className="text-sky-400" />,
+    },
+    {
+      skill: "Framer",
       level: "Experienced",
       size: 40,
-      icon: <FaReact size={40} className="text-sky-400" />,
+      icon: <FiFramer size={40} className="text-sky-400" />,
     },
+    
+   
   ];
 
   const vars = {
