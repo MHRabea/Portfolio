@@ -161,7 +161,7 @@ const ProjectCard1 = ({ images}) => {
             damping: 17,
           }}
         className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-          <a href="https://github.com/MHRabea/instagram-clone.git"  target="_blank"  className="inline-block w-full h-full p-2">
+          <a href="https://github.com/MHRabea/instagram-clone.git"  target="_blank" rel="noreferrer"  className="inline-block w-full h-full p-2">
             Source Code
           </a>
         </motion.button>
