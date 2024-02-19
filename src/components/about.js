@@ -1,6 +1,5 @@
 import { SiCss3 } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa";
-import { FaBootstrap } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { TbBrandJavascript } from "react-icons/tb";
