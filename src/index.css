@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply bg-custom1 leading-tight  h-screen text-white overflow-hidden overflow-y-scroll
+    @apply bg-[url('./images/rebel.png')] bg-sky-950 leading-tight  h-screen text-white overflow-hidden overflow-y-scroll
   }
 }
 

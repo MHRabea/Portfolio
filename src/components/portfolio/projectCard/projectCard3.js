@@ -152,8 +152,8 @@ const ProjectCard3 = ({ images }) => {
             stiffness: 400,
             damping: 17,
           }}
-        className="w-18 h-10 p-2 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-          <a href="https://github.com/MHRabea/Chat-App--.git">
+        className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
+          <a href="https://github.com/MHRabea/Chat-App--.git"  target="_blank" className="inline-block w-full h-full p-2">
             Source Code
           </a>
         </motion.button>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CarouselP3 from "../carousel/carouselP3";
+import CarouselP4 from "../carousel/carouselP4";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
@@ -13,31 +13,31 @@ const ProjectCard4 = ({ images }) => {
 
   const details = [
     {
-        text: "My First App",
+        text: "This App",
         icon: <IoCheckmarkDoneSharp className="mr-2" />,
       },
    {
-      text: "Develeped Using React.js, Css and FireBase",
+      text: "Develeped Using React.js,TailwindCss and Framer Motion",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Responsive Design",
+      text: "Modern & Responsive Design",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "SignUp & LogIn",
+      text: "staggered Animations",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Add & Contacts",
+      text: "Mobile Navigation",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Search For contacts",
+      text: "Click & Review",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
     {
-      text: "Send Texts & Images",
+      text: "Direct Contact",
       icon: <IoCheckmarkDoneSharp className="mr-2" />,
     },
   ];
@@ -81,9 +81,9 @@ const ProjectCard4 = ({ images }) => {
         }}
         className="flex items-center justify-center flex-col space-y-3"
       >
-        <CarouselP3 images={images} />
+        <CarouselP4 images={images} />
         <div className=" flex flex-col items-center justify-center w-96 max-w-80">
-          <p className="text-lg font-mono text-sky-200">Chat App</p>
+          <p className="text-lg font-mono text-sky-200">Portfolio App</p>
         </div>
         <motion.button
           whileHover={{ scale: 1.2 }}
@@ -152,8 +152,8 @@ const ProjectCard4 = ({ images }) => {
             stiffness: 400,
             damping: 17,
           }}
-        className="w-18 h-10 p-2 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-          <a href="https://github.com/MHRabea/Chat-App--.git">
+        className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300 inline-block">
+          <a href="https://github.com/MHRabea/Chat-App--.git"  target="_blank" className="inline-block w-full h-full p-2">
             Source Code
           </a>
         </motion.button>

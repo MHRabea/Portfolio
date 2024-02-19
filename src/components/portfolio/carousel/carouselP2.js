@@ -96,13 +96,13 @@ const CarouselP2 = ({ images, interval = 3000 }) => {
             key={index}
             className={`${
               index === currentIndex ? "block" : "hidden"
-            } transition animate-fadeIn duration-500 ease-in-out z-0`}
+            } transition animate-fadeIn duration-500 ease-in-out z-0 border-2 rounded-lg`}
             onClick={toggleReview}
           >
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="w-full h-auto rounded-lg cursor-pointer"
+              className="w-full h-auto rounded-md cursor-pointer"
             />
           </div>
         ))}

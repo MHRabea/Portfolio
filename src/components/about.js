@@ -118,14 +118,13 @@ const About = () => {
     <section
       id="about"
       className="flex flex-col items-center justify-center mt-24 w-screen min-h-screen
-      max-w-[75rem] space-y-5 origin-top
-    "
+                 max-w-[75rem] space-y-5 origin-top
+                 "
     >
       <div
         className="text-2xl text-sky-400 font-mono flex justify-center
-      items-center w-[24rem] sm:w-[34rem] md:w-[42rem] lg:w-[29rem] h-20
-      rounded-full mb-10 animate-fadeInY origin-top
-      "
+                   items-center w-[15rem]  h-20 mb-10 animate-fadeInY origin-top border-b-2
+                   "
       >
         About me
       </div>
@@ -133,9 +132,9 @@ const About = () => {
       <div>
         <motion.div
           className="w-screen flex flex-col lg:flex-row items-center
-    justify-center max-w-[75rem] sm:max-w-[75rem] px-10 overflow-hidden lg:space-x-20
-     lg:space-y-0 origin-top"
-        >
+                     justify-center max-w-[75rem] sm:max-w-[75rem] px-10 overflow-hidden lg:space-x-20
+                     lg:space-y-0 origin-top"
+                     >
           {/* Skills */}
           <AnimatePresence>
             <motion.div
@@ -146,10 +145,10 @@ const About = () => {
                 once: true,
               }}
               className="flex flex-col justify-center items-center lg:basis-1/4
-      bg-gradient-to-b from-sky-600 to-sky-900 rounded-xl  lg:rounded-tl-2xl
-      lg:rounded-bl-2xl w-96 order-2 lg:order-none mb-12 lg:mb-0 sm:w-[80%] font-mono
-      h-[40rem] relative overflow-hidden origin-top
-      "
+                         bg-gradient-to-b from-sky-600 rounded-xl  lg:rounded-tl-2xl
+                         lg:rounded-bl-2xl w-96 order-2 lg:order-none mb-12 lg:mb-0 sm:w-[80%] font-mono
+                         h-[40rem] relative overflow-hidden origin-top border-r-2 border-l-2 
+                         "
             >
               <motion.div
                 initial={{ opacity: 0, translateY: -50 }}
@@ -162,7 +161,7 @@ const About = () => {
                   translateY: 0,
                 }}
                 className="mb-5 absolute top-0 flex items-center justify-center
-           bg-sky-300 text-black w-full h-20 rounded-b-full text-2xl origin-top"
+                          bg-sky-300 text-black w-full h-20 rounded-b-full text-2xl origin-top"
               >
                 skills
               </motion.div>
@@ -178,7 +177,7 @@ const About = () => {
                   duration: 0.6,
                 }}
                 className="flex flex-row lg:flex-col items-center space-x-2
-           sm:space-x-20 md:space-x-40 lg:space-x-0 lg:mt-10 "
+                           sm:space-x-20 md:space-x-40 lg:space-x-0 lg:mt-10 "
               >
                 {/* column left mobile view */}
                 <div className="space-y-10 lg:space-y-2 overflow-hidden">
@@ -237,10 +236,10 @@ const About = () => {
                 once: true,
               }}
               className="flex flex-col justify-center items-center lg:basis-1/2
-      bg-gradient-to-b from-sky-600 to-sky-900 rounded-xl  w-96 order-1
-      lg:order-none mb-10 lg:mb-0 sm:w-[80%] font-mono h-[40rem] text-center px-5
-      relative overflow-hidden origin-top
-      "
+                         bg-gradient-to-b from-sky-600 rounded-xl  w-96 order-1
+                         lg:order-none mb-10 lg:mb-0 sm:w-[80%] font-mono h-[40rem] text-center px-5
+                         relative overflow-hidden origin-top border-r-2 border-l-2
+                         "
             >
               <motion.div
                 initial={{ opacity: 0, translateY: -50 }}
@@ -253,7 +252,7 @@ const About = () => {
                   translateY: 0,
                 }}
                 className="mb-5 absolute top-0 flex items-center justify-center
-           bg-sky-300 w-full h-20 rounded-b-full text-black text-2xl"
+                          bg-sky-300 w-full h-20 rounded-b-full text-black text-2xl"
               >
                 Get To Know Me
               </motion.div>
@@ -300,10 +299,10 @@ const About = () => {
                 once: true,
               }}
               className="flex flex-col justify-center items-center lg:basis-1/4
-      bg-gradient-to-b from-sky-600 to-sky-900 rounded-xl lg:rounded-tr-2xl
-      lg:rounded-br-2xl w-96 order-3 lg:order-none mb-5 lg:mb-0 sm:w-[80%] font-mono
-      h-[40rem] relative overflow-hidden space-y-10
-      "
+                         bg-gradient-to-b from-sky-600 rounded-xl lg:rounded-tr-2xl
+                         lg:rounded-br-2xl w-96 order-3 lg:order-none mb-5 lg:mb-0 sm:w-[80%] font-mono
+                         h-[40rem] relative overflow-hidden space-y-10 hover:bg-transparent border-r-2 border-l-2
+                         "
             >
               {/* title */}
               <motion.div
@@ -317,13 +316,13 @@ const About = () => {
                   translateY: 0,
                 }}
                 className="flex items-center justify-center absolute top-0
-          rounded-b-full w-full h-20 bg-sky-300 text-black text-2xl"
+                           rounded-b-full w-full h-20 bg-sky-300 text-black text-2xl"
               >
                 Services
               </motion.div>
               {/* menu */}
               <motion.div
-               variants={{
+                variants={{
                   initial: { opacity: 0, y: "-30vh" },
                   show: { opacity: 1, y: 0 },
                 }}
@@ -333,27 +332,27 @@ const About = () => {
                   duration: 0.6,
                 }}
               >
-              <div className="flex items-start  justify-center flex-col  text-center space-y-5 px-2 overflow-hidden">
-               
-                {/* menu items */}
-                {services.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, translateX: -50, translateY: -50 }}
-                    animate={{ opacity: 1, translateX: 0, translateY: 0 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: i * 0.3,
-                    }}
-                    className=" flex items-center justify-center lg:mb-1"
-                  >
-                    <BsPatchCheckFill size={23} className="text-sky-400" />
-                    <div className="ml-3 text-lg lg:text-sm text-center border-b-2">
-                      {item.text}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+                <div className="flex items-start  justify-center flex-col  text-center space-y-5 px-2 overflow-hidden">
+
+                  {/* menu items */}
+                  {services.map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, translateX: -50, translateY: -50 }}
+                      animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: i * 0.3,
+                      }}
+                      className=" flex items-center justify-center lg:mb-1"
+                    >
+                      <BsPatchCheckFill size={23} className="text-sky-400" />
+                      <div className="ml-3 text-lg lg:text-[12px] text-center border-b-2">
+                        {item.text}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
 
               </motion.div>
             </motion.div>

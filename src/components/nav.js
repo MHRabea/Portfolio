@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Logo from "../images/Color-no-Background.png";
+import { useState } from "react";
+import Logo from "../images/final logom-011.png";
 import { Link } from "react-scroll";
 import { MdClose } from "react-icons/md";
 import { GrHomeRounded } from "react-icons/gr";
@@ -188,8 +188,7 @@ const Navbar = () => {
             stiffness: 400,
             damping: 17,
           }}
-          className="p-2 ease-in-out bg-transparent hidden md:flex items-center hover:border-b-2 border-sky-300
-              text-sky-400"
+          className="ease-in-out bg-transparent hidden md:flex items-center "
         >
           <motion.div
             variants={{
@@ -200,13 +199,15 @@ const Navbar = () => {
             animate="show"
             transition={{
               duration: 0.6,
-              delay:1.2,
+              delay: 1.2,
             }}
-            className="p-2 ease-in-out bg-transparent hidden md:flex items-center hover:border-b-2 border-sky-300
+            className="p-2 ease-in-out bg-transparent items-center hover:border-b-2 border-sky-300
               text-sky-400"
           >
-            <TbMessageCircleCheck size={30} className="" />
-            <h4>Contact me</h4>
+            <Link activeClass="active" smooth spy to='contact' className="flex items-center justify-center space-x-2">
+              <TbMessageCircleCheck size={30} />
+              <h4>Contact me</h4>
+            </Link>
           </motion.div>
         </motion.button>
       </nav>

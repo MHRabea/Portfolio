@@ -4,6 +4,7 @@ import Brief from "./components/breif";
 import About from "./components/about";
 import Portfolio from "./components/portfolio/portfolio";
 import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 
 
@@ -16,6 +17,7 @@ function App() {
      <About />
      <Portfolio />
      <Contact />
+     <Footer />
      </div>
   );
 }
