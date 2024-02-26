@@ -3,6 +3,8 @@ import CarouselP3 from "../carousel/carouselP3";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
+import { IoRocketOutline } from "react-icons/io5";
+import { TbSourceCode } from "react-icons/tb";
 
 const ProjectCard3 = ({ images }) => {
   const [expanded, setExpanded] = useState(false);
@@ -144,7 +146,8 @@ const ProjectCard3 = ({ images }) => {
           )}
         </AnimatePresence>
 
-        <motion.button 
+        <div className="flex items-center justify-center space-x-5">
+         <motion.button 
         whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           transition={{
@@ -153,10 +156,25 @@ const ProjectCard3 = ({ images }) => {
             damping: 17,
           }}
         className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-          <a href="https://github.com/MHRabea/Chat-App--.git" rel="noreferrer"  target="_blank" className="inline-block w-full h-full p-2">
-            Source Code
+          <a href="https://github.com/MHRabea/instagram-clone.git"  target="_blank" rel="noreferrer"  className="flex items-center justify-center space-x-2 w-full h-full p-2">
+            <p>Source Code</p> <TbSourceCode  size={20}/>
           </a>
         </motion.button>
+        <motion.button 
+        whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17,
+          }}
+          disabled
+        className="w-18 h-10 bg-gray-400 rounded-lg hover:shadow-lg hover:shadow-sky-300 flex items-center justify-center p-2 space-x-2" >
+          
+            <p>Live Review soon..</p> <IoRocketOutline size={20}/>
+          
+        </motion.button>
+         </div>
       </motion.div>
     </div>
   );
