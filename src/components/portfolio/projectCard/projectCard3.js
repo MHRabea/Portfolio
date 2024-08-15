@@ -1,10 +1,11 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import CarouselP3 from "../carousel/carouselP3";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { IoRocketOutline } from "react-icons/io5";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { TbSourceCode } from "react-icons/tb";
+
+import CarouselP3 from "../carousel/carouselP3";
 
 const ProjectCard3 = ({ images }) => {
   const [expanded, setExpanded] = useState(false);
@@ -156,7 +157,7 @@ const ProjectCard3 = ({ images }) => {
             damping: 17,
           }}
         className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-          <a href="https://github.com/MHRabea/instagram-clone.git"  target="_blank" rel="noreferrer"  className="flex items-center justify-center space-x-2 w-full h-full p-2">
+          <a href="https://github.com/MHRabea/Chat-App--"  target="_blank" rel="noreferrer"  className="flex items-center justify-center space-x-2 w-full h-full p-2">
             <p>Source Code</p> <TbSourceCode  size={20}/>
           </a>
         </motion.button>

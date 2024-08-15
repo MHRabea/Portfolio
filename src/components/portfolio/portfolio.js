@@ -1,9 +1,11 @@
 import React from "react";
+
 import ProjectCard1 from "./projectCard/projectCard1";
 import ProjectCard2 from "./projectCard/projectCard2";
 import ProjectCard3 from "./projectCard/projectCard3";
 import ProjectCard4 from "./projectCard/projectCard4";
 import ProjectCard5 from "./projectCard/projectCard5";
+import ProjectCard6 from "./projectCard/projectCard6";
 
 const Portfolio = () => {
   // imageImporter.js
@@ -44,6 +46,13 @@ const Portfolio = () => {
       /\.(png|jpe?g|svg)$/
     )
   );
+  const imagesVI = importAll(
+    require.context(
+      "../../../public/images/Project 6 Screens",
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
   return (
     <section
       id="portfolio"
@@ -60,6 +69,7 @@ const Portfolio = () => {
         <ProjectCard3 images={imagesIII} />
         <ProjectCard4 images={imagesIV} />
         <ProjectCard5 images={imagesV}/>
+        <ProjectCard6 images={imagesVI}/>
       </div>
     </section>
   );

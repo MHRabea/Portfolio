@@ -5,9 +5,9 @@ import { IoRocketOutline } from "react-icons/io5";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { TbSourceCode } from "react-icons/tb";
 
-import CarouselP4 from "../carousel/carouselP4";
+import CarouselP6 from "../carousel/carouselP6";
 
-const ProjectCard4 = ({ images }) => {
+const ProjectCard6 = ({ images }) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpand = () => {
@@ -16,32 +16,40 @@ const ProjectCard4 = ({ images }) => {
 
   const details = [
     {
-      text: "This App",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      text: "دار صيد الخاطر للنشر والتوزيع - Said El-Khater",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
     },
     {
-      text: "Develeped Using React.js,TailwindCss and Framer Motion",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      text: "Develeped Using React.js,TailwindCss and Framer Motion for front-end",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
     },
     {
-      text: "Modern & Responsive Design",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      text: "firebase , firebase cloud-functions , firestore , storage , authentication and php for back-end and database",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
     },
     {
-      text: "staggered Animations",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      text: "Extensive Book Collection: Discover a variety of genres, authors, and titles to satisfy every reader's taste.",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
     },
     {
-      text: "Mobile Navigation",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      text: "Search: Easily find specific books using my powerful search option.",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
     },
     {
-      text: "Click & Review",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      text: "Add Books to Your Cart: Browse a wide selection of books and add them to your cart with just a click.",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
     },
     {
-      text: "Direct Contact",
-      icon: <IoCheckmarkDoneSharp className="mr-2" />,
+      text: "Send Orders via Email: Submit your contact information and book orders through our seamless email system, ensuring you get the books you love.",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
+    },
+    {
+      text: "Responsive Design: Enjoy a smooth and consistent experience across all devices, from desktops to mobile phones.",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
+    },
+    {
+      text: "Modern and Intuitive UI: Navigate effortlessly through our clean and visually appealing interface, designed with user experience in mind.",
+      icon: <IoCheckmarkDoneSharp className="mr-2" size={20} />,
     },
   ];
   const menuVars = {
@@ -50,7 +58,7 @@ const ProjectCard4 = ({ images }) => {
       opacity: 0,
     },
     animate: {
-      height: "17rem",
+      height: "40rem",
       opacity: 1,
       transition: {
         duration: 0.8,
@@ -84,9 +92,10 @@ const ProjectCard4 = ({ images }) => {
         }}
         className="flex items-center justify-center flex-col space-y-3"
       >
-        <CarouselP4 images={images} />
+        <CarouselP6 images={images} />
         <div className=" flex flex-col items-center justify-center w-96 max-w-80">
-          <p className="text-lg font-mono text-sky-200">Portfolio App</p>
+          <p className="text-lg font-mono text-sky-200">Book-Library</p>
+          <p className="text-lg font-mono text-sky-200">موقع صيد الخاطر</p>
         </div>
         <motion.button
           whileHover={{ scale: 1.2 }}
@@ -137,7 +146,8 @@ const ProjectCard4 = ({ images }) => {
                         transition={{ duration: 0.3, delay: index * 0.2 }}
                         className="flex items-center justify-center text-sky-200"
                       >
-                        {item.icon} {item.text}
+                        <div>{item.icon}</div>
+                        <div>{item.text}</div>
                       </motion.div>
                     </div>
                   );
@@ -156,8 +166,14 @@ const ProjectCard4 = ({ images }) => {
               stiffness: 400,
               damping: 17,
             }}
-            className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-            <a href="https://github.com/MHRabea/Portfolio" target="_blank" rel="noreferrer" className="flex items-center justify-center space-x-2 w-full h-full p-2">
+            className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300"
+          >
+            <a
+              href="https://github.com/MHRabea/book-library"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center space-x-2 w-full h-full p-2"
+            >
               <p>Source Code</p> <TbSourceCode size={20} />
             </a>
           </motion.button>
@@ -169,8 +185,14 @@ const ProjectCard4 = ({ images }) => {
               stiffness: 400,
               damping: 17,
             }}
-            className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300">
-            <a href="https://mahmoudsaaddev.netlify.app/" target="_blank" rel="noreferrer" className="w-full h-full p-2 flex items-center justify-center space-x-2">
+            className="w-18 h-10 bg-sky-400 rounded-lg hover:shadow-lg hover:shadow-sky-300"
+          >
+            <a
+              href="https://booksbooking.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full h-full p-2 flex items-center justify-center space-x-2"
+            >
               <p>Visit</p> <IoRocketOutline size={20} />
             </a>
           </motion.button>
@@ -180,4 +202,4 @@ const ProjectCard4 = ({ images }) => {
   );
 };
 
-export default ProjectCard4;
+export default ProjectCard6;
